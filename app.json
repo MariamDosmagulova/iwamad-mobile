@@ -23,10 +23,10 @@
     },
     "experiments": {
       "baseUrl": "/iwamad-mobile"
-    }
-    ,
+    },
     "plugins": [
-      "expo-status-bar"
+      "expo-status-bar",
+      "expo-router"
     ]
   }
 }

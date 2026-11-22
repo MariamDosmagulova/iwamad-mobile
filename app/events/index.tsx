@@ -49,7 +49,7 @@ export default function EventsScreen() {
       onRefresh={() => refetch()}
       ListHeaderComponent={
         <View>
-          <Text style={styles.hint}>Long-press an event to save it. Saved: {savedIds.length}</Text>
+          <Text style={styles.hint}>Swipe or long-press an event to save it. Saved: {savedIds.length}</Text>
           <TextInput
             style={styles.search}
             value={query}
@@ -63,7 +63,7 @@ export default function EventsScreen() {
           event={item}
           saved={savedIds.includes(item.id)}
           onPress={() => router.push(`/events/${item.id}`)}
-          onLongPress={() => toggleSaved(item.id)}
+          onToggleSaved={() => toggleSaved(item.id)}
         />
       )}
       ListEmptyComponent={<Text style={styles.empty}>No events match</Text>}
